@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Menu Usando Bootstrap</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap -->
+        <link href="./login_files/bootstrap.css" rel="stylesheet" media="screen">
+        <link href="./login_files/style.css" rel="stylesheet" media="screen">
+        	
+           
+
+        <script src="./login_files/jquery.js"></script>
+        <script src="./login_files/bootstrap.js"></script>
+        <script src="./login_files/crawler.js" type="text/javascript"></script><style type="text/css">.marquee{white-space:nowrap;overflow:hidden;visibility:hidden;}#marq_kill_marg_bord{border:none!important;margin:0!important;}</style>   <!-- este es el crawler -->
+        
+                   
+    </head>
+    <body class="">
+        <div id="top_bar" class="container">
+            <div class="navbar">
+                <div class="row">
+                    <div class="col-md-2">
+                        <button type="button" onclick="" class="btn btn-default navbar-btn pull-left">Regístrate</button>
+                    </div>
+                    <div class="col-md-10">
+                        <form action="ingresar.php" method="post">
+                            <span>Usuario </span>
+                            <input name="usuario" type="text" id="usuario" value="" style="max-width: 200px;">
+                            <span>Clave </span>
+                            <input name="password" type="password" id="password" value="" style="max-width: 200px;">
+                            <button type="submit" class="btn btn-default">Entrar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="marquee0" style="overflow: hidden;"><div style="visibility: visible; width: 74%; height: 25px; position: relative; overflow: hidden;"><div style="position: absolute; left: 138px; white-space: nowrap; top: 2px;">&nbsp;__Bienvenidos a ......</div><div style="position: absolute; left: -730px; white-space: nowrap; top: 2px;">&nbsp;__Bienvenidos a ......</div></div></div>
+        </div>
+        <div id="header" class="container">
+        	
+            <img class="img-responsive" src="./login_files/logo-iupsm.jpg">
+                    
+        </div>
+        <div id="main_navbar" class="container">
+            <ul class="nav navbar-nav">
+              <li><a href="login.html">Inicio</a></li>
+              <li><a href="login.html">Configurar..</a></li>
+              <li class="dropdown">
+                <a href="login.html" class="dropdown-toggle" data-toggle="dropdown">Datos <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Opcion 1</a></li>
+                  <li><a href="#">Opcion 2</a></li>
+                  <li><a href="#">Opcion 3</a></li>
+                  
+                </ul>              
+              </li>
+                <li>
+                  <a href="login.html" class="dropdown-toggle" data-toggle="dropdown">Reportes y Consultas <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Reporte 1</a></li>
+                    <li><a href="#">Reporte 2</a></li>
+                    <li><a href="#">Reporte 3</a></li>
+                  
+                  </ul>              
+                </li>
+              <li><a href="login.html">Contáctanos</a></li>
+            </ul>
+        </div>
+
+        <div class="container">
+            
+<h1 class="plain">Iniciar Sesión</h1> 
+
+
+
+
+
+
+<form id="form_data" name="form_data" class="" role="form" action="Ingresar.php" method="post">
+        
+    <div class="panel panel-secondary">
+        <div class="panel-heading">
+          Datos de acceso
+        </div>
+        <div class="panel-body">
+            <div class="form-group">
+              <label for="form_email">Nombre de usuario</label>
+              <input name="usuario" type="text" class="form-control" id="usuario" value="" style="max-width: 25%;">
+              <p class="help-block">introduce tu nombre de usuario </p>
+            </div>
+            <div class="form-group">
+              <label for="form_password">Clave</label>
+              <input name="password" type="password" class="form-control" id="password" value="" style="max-width: 25%;">
+              <p class="help-block">introduce tu clave de acceso</p>
+            </div>
+                <p><a href="recuperar_password.php">¿Has olvidado tu usuario o clave de acceso?</a></p>
+            <button type="submit" class="btn btn-primary">Entrar</button>
+        </div>
+    </div>
+        
+</form>
+
+<script type="text/javascript">
+$('#form_data input[type=text]').on('change invalid', function() {
+    var textfield = $(this).get(0);
+
+    // 'setCustomValidity not only sets the message, but also marks
+    // the field as invalid. In order to see whether the field really is
+    // invalid, we have to remove the message first
+    textfield.setCustomValidity('');
+
+    if (!textfield.validity.valid) {
+      textfield.setCustomValidity('Por favor introduzca este campo');  
+    }
+});
+</script>
+
+
+        </div>
+            
+        <br>
+        <br>
+        <br>
+        <div id="footer" class="container">
+            © Todos los derechos reservados. Universidad Santiago Mariño 2016.
+        </div>
+        <br>
+        <br>
+        <script type="text/javascript">
+            marqueeInit({
+                    uniqueid: 'news_bar',
+                    style: {
+                            'width': '100%',
+                            'height': '25px'
+                    },
+                    inc: 5, //speed - pixel increment for each iteration of this marquee's movement
+                    mouse: 'cursor driven', //mouseover behavior ('pause' 'cursor driven' or false)
+                    moveatleast: 2,
+                    neutral: 150,
+                    savedirection: true,
+                    random: true
+            });
+        </script>
+    
+
+</body>
+
+</html>
